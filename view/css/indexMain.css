@@ -1,0 +1,135 @@
+body {
+  background: #f1f1f1;
+  -webkit-transition: .5s ease all;
+  transition: .5s ease all;
+  font-family: 'Montserrat', sans-serif;
+  max-width: 992px;
+  margin: 5% auto;
+}
+
+body.dark {
+  background: #000;
+}
+
+.bloque {
+  text-align: center;
+  width: 200px;
+  padding: 20px;
+  cursor: pointer;
+  margin: 20px auto;
+  background: green;
+}
+
+body.dark .bloque {
+  background: greenyellow;
+}
+
+nav {
+  background: #f1f1f1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 20px;
+  border-radius: 5px;
+  -webkit-transition: .5s ease all;
+  transition: .5s ease all;
+  -webkit-box-shadow: #f1f1f1;
+          box-shadow: #f1f1f1;
+}
+
+body.dark nav {
+  background: darkgrey;
+  -webkit-box-shadow: #f1f1f1;
+          box-shadow: #f1f1f1;
+}
+
+body.dark nav a {
+  color: lightgrey;
+}
+
+body.dark nav a:hover {
+  color: white;
+}
+
+.switch {
+  background: grey;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+}
+
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #f1f1f1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.switch.active {
+  background: orange;
+  color: black;
+}
+
+.switch.active::after {
+  right: 0;
+  left: unset;
+}
+
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #fff;
+}
+
+/* Estados de los enlaces */
+a:link {
+  text-decoration: none;
+  color: var(--ColorTexto);
+}
+
+a:active {
+  color: var(--ColorTexto);
+}
+
+a:visited {
+  color: var(--ColorTexto);
+}
+
+a:hover {
+  color: var(--Hover);
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: #525252;
+}
+
+body.dark footer {
+  color: white;
+}
+/*# sourceMappingURL=indexMain.css.map */
