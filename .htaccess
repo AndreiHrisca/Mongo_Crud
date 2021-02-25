@@ -1,0 +1,5 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+# Sintaxis
+RewriteRule ^url-amigable-aqui$ url-no-amigable-va-aqui.php
