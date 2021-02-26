@@ -11,6 +11,24 @@ body.dark {
   background: #000;
 }
 
+h3 {
+  padding: 20px;
+  background-color: darkgray;
+  border-radius: 5px;
+}
+
+body.dark h3 {
+  background-color: lightgray;
+}
+
+#btnADD {
+  background-color: lightgreen;
+  width: 400px;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+/* ----- ----- ----- ----- DIVS ----- ----- ----- ----- */
 .bloque {
   text-align: center;
   width: 200px;
@@ -24,6 +42,51 @@ body.dark .bloque {
   background: greenyellow;
 }
 
+.caja {
+  text-align: center;
+  border-radius: 5px;
+}
+
+body.dark .caja {
+  color: white;
+}
+
+/* ----- ----- ----- ----- TABLE ----- ----- ----- ----- */
+table {
+  text-align: center;
+  margin: 0 auto;
+  color: black;
+}
+
+body.dark table {
+  color: white;
+}
+
+td {
+  padding: 20px;
+}
+
+.btnEditar {
+  background-color: lightyellow;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+body.dark .btnEditar {
+  color: black;
+}
+
+.btnBorrar {
+  background-color: lightcoral;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+body.dark .btnBorrar {
+  color: black;
+}
+
+/* ----- ----- ----- ----- NAV ----- ----- ----- ----- */
 nav {
   background: #f1f1f1;
   display: -webkit-box;
@@ -57,6 +120,7 @@ body.dark nav a:hover {
   color: white;
 }
 
+/* ----- ----- ----- ----- SWITCH ----- ----- ----- ----- */
 .switch {
   background: grey;
   border-radius: 1000px;
@@ -105,10 +169,14 @@ body.dark nav a:hover {
   color: #fff;
 }
 
-/* Estados de los enlaces */
+/* ----- ----- ----- ----- ENLACES ----- ----- ----- ----- */
 a:link {
   text-decoration: none;
   color: var(--ColorTexto);
+}
+
+a:link:hover {
+  color: white;
 }
 
 a:active {
@@ -123,6 +191,7 @@ a:hover {
   color: var(--Hover);
 }
 
+/* ----- ----- ----- ----- FOOTER ----- ----- ----- ----- */
 footer {
   text-align: center;
   margin-top: 2rem;

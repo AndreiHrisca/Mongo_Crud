@@ -176,32 +176,7 @@ class Empresa { //extends ArrayObject
     public function listar(){
         empresaDAO::listar();
     }
-    /*
-    public function imprimirCabezeraTabla(){
-        $txt = "";
-        foreach ($this as $clave => $valor) {
-            $txt .= "<tr>";
-                $txt .= "<th>";
-                $txt .= ucwords("Nombre empresa");
-                $txt .= "</th>";
-                $txt .= "<th>";
-                $txt .= ucwords("CEO");
-                $txt .= "</th>";
-                $txt .= "<th>";
-                $txt .= ucwords("Precio");
-                $txt .= "</th>";
-                $txt .= "<th>";
-                $txt .= ucwords("Comentarios");
-                $txt .= "</th>";
-                $txt .= "<th>";
-                $txt .= ucwords("Acciones");
-                $txt .= "</th>";
-            $txt .= "</tr>";
-
-            return $txt;
-        }
-    }
-    */
+    
     public function obtenerEmpresas() {
         $rows = empresaDAO::listar();
         foreach ($rows as $document) {
@@ -239,10 +214,10 @@ class Empresa { //extends ArrayObject
                 $txt .= ucwords($this->getComentario());
                 $txt .= "</td>";
                 $txt .= "<td>";
-                $txt .= "<a href='formEmpresa.php?id=".$this->getId()."'>Editar</a>";
+                $txt .= "<a class='btnEditar' href='formEmpresa.php?id=".$this->getId()."'>Editar</a>";
                 $txt .= "</td>";
                 $txt .= "<td>";
-                $txt .= "<a href='javascript:borrarSeleccion(\"".$this->getId()."\")'>Borrar</a>";
+                $txt .= "<a class='btnBorrar' href='javascript:borrarSeleccion(\"".$this->getId()."\")'>Borrar</a>";
                 $txt .= "</td>";
             $txt .= "</tr>";
             return $txt;

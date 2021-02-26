@@ -29,15 +29,22 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta charset="UTF-8">
+    <title>Crud MongoDB</title>
+    <meta name="description" content="Crud con mongoDB y php. MVC">
+    <meta name="keywords" content="PHP, MongoDB, CRUD, SCSS">
+    <meta name="author" content="Andrei Ionut Hrisca">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <script src="js/ajax.js" type="text/javascript"></script>
 
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script>tinymce.init({selector:'textarea'});</script>
-    <title>Document</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/img/favicon.png" sizes="16x16" type="image/ico">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="./css/indexMain.css">
+
 </head>
 <body>
     <a href="listaEmpresas.php" title="Lista de empresas">Atras</a>
@@ -65,5 +72,6 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
 
     </form>
 
+    <script src="./js/themes.js"></script>
 </body>
 </html>
