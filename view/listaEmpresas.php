@@ -1,7 +1,6 @@
 <?php
 require "../model/Empresa.php";
 require "../model/empresaDAO.php";
-//require "../controller/conexion.php";
 
 $listaDatos = new ListaDeEmpresas();
 $listaDatos->obtenerLista();

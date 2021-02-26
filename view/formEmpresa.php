@@ -19,12 +19,10 @@ if(isset($_POST) && !empty($_POST)){
     //$empresa1->insertar($_POST);
 
     header('location:listaEmpresas.php');
-    //condiciones
 }
 $empresa2 = new  Empresa();
 if(isset($_GET['id']) && !empty($_GET['id'])){
     $empresa2 = $empresa2->obtenerId($_GET['id']);
-    //echo print_r($empresa2);
 }
 
 ?>

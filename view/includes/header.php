@@ -1,10 +1,7 @@
-<header>
-   <nav>
-    <ul>
-        <li><a href="../index.php">Inicio</a></li>
-        <li><a href="./listaEmpresas.php">Empresas</a></li>
-        <li><a href="./listaGastos.php">Gastos</a></li>
-        <li><a href="./contacto.php">Contacto</a></li>
-    </ul>
-   </nav> 
-</header>
+<nav class="navbar">
+    <a href="../../index.php">MongoDB</a>
+    <button class="switch" id="switch">
+      <span><i class="fas fa-sun"></i></span>
+      <span><i class="fas fa-moon"></i></span>
+    </button>
+  </nav>
