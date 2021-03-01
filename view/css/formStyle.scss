@@ -1,0 +1,79 @@
+.tox-notifications-container {
+    display: none;
+}
+
+$Fonts : "Montserrat", sans-serif;
+
+body {
+    font-family: $Fonts;
+    font-size: 18px;
+    width: 992px;
+    margin: 0 auto;
+}
+
+#ContenedorForm {
+    width: 900px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+form > div {
+    margin: 10px;
+    text-align: center;
+    line-height: 45px;
+}
+textarea {
+    max-width: 200px;
+}
+input{
+    margin: 20px auto;
+    outline: 0;
+    width: 95%;
+    border: 0;
+    padding: 15px;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+}
+input[type=submit] {
+    margin-top: 20px;
+    text-transform: uppercase;
+    outline: 0;
+    background: #96bb7c;
+    width: 40%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+input[type=submit]:hover,.form input[type=submit]:active,.form input[type=submit]:focus {
+    background: #d6efc7;
+  }
+
+label {
+    display: none;
+}
+a:link {
+    text-decoration: none;
+    color: #6d6875;
+  }
+  
+  a:visited {
+    color: #6d6875;
+  }
+  
+  a:hover {
+    color: #b5838d;
+  }
+  
+  a:active {
+    color: #b5838d;
+  }

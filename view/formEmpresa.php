@@ -44,34 +44,38 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
     <link rel="shortcut icon" href="./assets/img/favicon.png" sizes="16x16" type="image/ico">
     <!-- Estilos -->
     <link rel="stylesheet" href="./css/indexMain.css">
+    <link rel="stylesheet" href="./css/formStyle.css">
 
 </head>
 <body>
     <a href="listaEmpresas.php" title="Lista de empresas">Atras</a>
-    <h1>Formulario Empresas</h1>
+    <h3>Formulario empresas</h3>
 
+    <!-- HIDDEN / DISPLAY NONE -->
+    <!-- class= tox-notification tox-notification--in tox-notification--warning -->
+    <div id="ContenedorForm">
+        <form name="Empresas" action="" method="post" onsubmit="formValid()" enctype="multipart/form-data"> <!--  -->
+        <legend>Añade nuevas empresas</legend>
+            <input type="hidden" name="id" value="<?php echo $empresa2->getId(); ?>">
 
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" placeholder="Introduce tu nombre" value="<?php echo $empresa2->getNombre(); ?>" >
 
+            <label for="CEO">CEO</label>
+            <input type="text" name="CEO" placeholder="CEO"  value="<?php echo $empresa2->getCEO() ?>">
 
-    <form name="Empresas" action="" method="post" onsubmit="formValid()" enctype="multipart/form-data"> <!--  -->
-        <input type="hidden" name="id" value="<?php echo $empresa2->getId(); ?>">
+            <label for="precio">Precio</label>
+            <input type="text" name="precio" placeholder="Precio" value="<?php echo $empresa2->getPrecio() ?>">
 
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" placeholder="Introduce tu nombre" value="<?php echo $empresa2->getNombre(); ?>" >
+            <label for="comentario">Comentario</label>
+            <textarea name="comentario" id="comentario"><?php echo $empresa2->getComentario() ?></textarea>
 
-        <label for="CEO">CEO</label>
-        <input type="text" name="CEO" placeholder="CEO"  value="<?php echo $empresa2->getCEO() ?>">
+            <input type="submit" value="Añadir">
 
-        <label for="precio">Precio</label>
-        <input type="text" name="precio" placeholder="Precio" value="<?php echo $empresa2->getPrecio() ?>">
+        </form>
 
-        <label for="comentario">Comentario</label>
-        <textarea name="comentario" id="comentario"><?php echo $empresa2->getComentario() ?></textarea>
-
-        <input type="submit" value="Añadir">
-
-    </form>
-
+    </div>
+    
     <script src="./js/themes.js"></script>
 </body>
 </html>
