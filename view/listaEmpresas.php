@@ -1,9 +1,6 @@
 <?php
-require "../model/Empresa.php";
-require "../model/empresaDAO.php";
+require "../controller/listaController.php";
 
-$listaDatos = new ListaDeEmpresas();
-$listaDatos->obtenerLista();
 
 ?>
 <!doctype html>

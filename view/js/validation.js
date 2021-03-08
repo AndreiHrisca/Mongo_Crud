@@ -1,14 +1,9 @@
+function validar() {
+    let nombre = document.getElementsByName("nombre").value;
+    let ceo = document.getElementsByName("CEO").value;
+    let precio = document.getElementsByName("precio").value;
 
-function formValid() {
-    
-
-    let nombre = document.forms["Empresas"]["Nombre"].value;
-    let ceo = document.forms["Empresas"]["CEO"].value;
-    let precio = document.forms["Empresas"]["Precio"].value;
-    let comentario = document.forms["Empresas"]["Comentario"].value;
-
-    if (nombre, ceo, precio, comentario == ""){
-        alert("Debes rellenar los campos.")
+    if(nombre == ""){
+        alert("Debes rellenar el campo nombre!!");
     }
-
 }

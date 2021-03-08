@@ -1,33 +1,9 @@
 <?php
-require "../model/Empresa.php";
-require "../model/empresaDAO.php";
-require "../controller/conexion.php";
-
-//crear objeto
-$empresa1 = New Empresa();
-if(isset($_POST) && !empty($_POST)){
-    if (!empty($_POST['id'])){
-        $empresa1->update($_POST);
-    }
-    else {
-        $empresa1->llenarObj($_POST);
-        $empresa1->insertar($empresa1);
-    }
-    //Prubas----------------------
-    //var_dump($empresa1);
-    //var_dump($_POST);
-    //$empresa1->insertar($_POST);
-
-    header('location:listaEmpresas.php');
-}
-$empresa2 = new  Empresa();
-if(isset($_GET['id']) && !empty($_GET['id'])){
-    $empresa2 = $empresa2->obtenerId($_GET['id']);
-}
+require "../controller/addEmpresaController.php";
 
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
     <title>Crud MongoDB</title>
@@ -36,8 +12,8 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
     <meta name="author" content="Andrei Ionut Hrisca">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="js/ajax.js" type="text/javascript"></script>
-
+    <script src="./js/ajax.js" type="text/javascript"></script>
+    <script src="./js/validation.js" type="text/javascript"></script>
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script>tinymce.init({selector:'textarea'});</script>
     <!-- Favicon -->
@@ -54,7 +30,7 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
     <!-- HIDDEN / DISPLAY NONE -->
     <!-- class= tox-notification tox-notification--in tox-notification--warning -->
     <div id="ContenedorForm">
-        <form name="Empresas" action="" method="post" onsubmit="formValid()" enctype="multipart/form-data"> <!--  -->
+        <form name="Empresas" method="post" onsubmit="validar()" enctype="multipart/form-data"> <!--  -->
         <legend>Añade nuevas empresas</legend>
             <input type="hidden" name="id" value="<?php echo $empresa2->getId(); ?>">
 
